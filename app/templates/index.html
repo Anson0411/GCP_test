@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charse="UTF-8">
+        <title> 測試系統 </title>
+    </head>
+    <body>
+        <h2> 系統測試 </h2>
+        <form action='/predict' method="POST">
+            sepalLengthCm<input type="text" name="sepalLengthCm" /><br/>
+            sepalWidthCm<input type="text" name="sepalWidthCm" /><br/>
+            petalLengthCm<input type="text" name="petalLengthCm" /><br/>
+            petalWidthCm<input type="text" name="petalWidthCm" /><br/>
+            <button>送出預測</button>
+        </form>
+        
+        <h2> 預測結果 </h2>
+        <div> 預測結果為: {{ data if data else "尚未進行預測" }}</div>
+
+    </body>    
+</html>
